@@ -1,0 +1,8 @@
+# Ignore Win and OSX files
+*.asv
+.DS_Store
+.DS_Store?
+.bak
+
+# Ignore the backup directory
+[Oo]ld[Vv]ersions/
