@@ -2,10 +2,10 @@
 *.asv
 .DS_Store
 .DS_Store?
-.bak
+*.bak
 
 # Ignore the backup directory
 [Oo]ld[Vv]ersions/
 
 # Ignore lockfile
-.lck
+*.lck
