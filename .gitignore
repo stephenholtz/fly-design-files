@@ -4,7 +4,7 @@
 .DS_Store?
 *.bak
 
-# Ignore the backup directory
+# Ignore Inventor backup directory
 [Oo]ld[Vv]ersions/
 
 # Ignore lockfile
@@ -12,3 +12,7 @@
 
 # Ignore vim backups
 *~
+
+# Ignore Autocad temp files
+*.dwl
+*.dwl2
