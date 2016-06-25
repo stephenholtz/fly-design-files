@@ -6,4 +6,4 @@ antenna-probes
 - *.m file has estimate of radial (cantilever) 1st resonant mode ~1.5-2kHz
  
 
-![Inventor Preview](./carbide_probe_30deg_tip_r01.png?raw=true "Inventor Preview")
+![Inventor Preview](./r01/carbide_probe_30deg_tip_r01.png?raw=true "Inventor Preview")

@@ -1,0 +1,4 @@
+Next version changes:
+- only specify sharp tipped version of the probe
+- use 0.08" default diameter of the carbide stock in design instead of 0.07" on r01 design
+- can shorten by small amount or lengthen the knurled portion
