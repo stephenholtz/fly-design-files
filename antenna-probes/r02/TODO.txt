@@ -1,4 +1,5 @@
 Next version changes:
 - only specify sharp tipped version of the probe
-- use 0.08" default diameter of the carbide stock in design instead of 0.07" on r01 design
 - can shorten by small amount or lengthen the knurled portion
+- no need for the 0.07 diameter, can reduce to the standard stock size of 0.06 diameter (1.5mm) will reduce the resonance but not critically
+- might want to make a version with a more forgiving diameter
