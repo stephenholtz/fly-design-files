@@ -1,6 +1,5 @@
 % Carbide probe specifications, treat entire probe as one long rod to get
-% conservative estimate of cantilever beam resonance (radial resonance)
-%clear; clc
+% conservative estimate of cantilevered beam resonance (radial resonance)
 
 % From email:
 % Tungsten Carbide Material Properties
@@ -15,18 +14,22 @@
 % Poisson's Ratio 20° C         ?                ASTM-C848       0.22
 % Thermal Conductivity 20 °C    W/m °K           ASTM-C408       85
 
+% Double check source:
 % http://www.roymech.co.uk/Useful_Tables/Vibrations/Natural_Vibrations.html
+
 p = 14.5*1000; % gm/cm^3 -> kg/m^3
 
 % Pa = kg*m^-1*s^-2
 E = 593*1E9; % Gpa -> pa
 
 % Len inches... b/n .65 and 1.03
-Lin = [1.03 .74];
+% Lin = [1.03 .731]; % Rev 2
+Lin = [.95 .650]; % Rev 2
 L = Lin.*2.54/100; % in->m
 
 % Diameter inches;
-Din = 0.07/1;
+% Din = 0.07; % Rev 1
+Din = 0.06/1; % Rev 2
 D = Din*2.54/100;
 
 M = A*L*p./L; % mass kg/m
@@ -38,4 +41,5 @@ I = (pi/64)*D^4;
 f = 3.52./(2*pi*L.^2) .* sqrt(E*I/(p*A));
 fprintf('%fkHz\n',f/1000)
 
-% likely somewhere between 1.5kHz and 2kHz
+% likely somewhere above 2.3kHz for Rev 1, 2kHz for Rev 2
+% photodiode or inferometer to check in lab
