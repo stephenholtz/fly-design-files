@@ -17,29 +17,53 @@
 % Double check source:
 % http://www.roymech.co.uk/Useful_Tables/Vibrations/Natural_Vibrations.html
 
+% Density
 p = 14.5*1000; % gm/cm^3 -> kg/m^3
 
 % Pa = kg*m^-1*s^-2
 E = 593*1E9; % Gpa -> pa
 
-% Len inches... b/n .65 and 1.03
-% Lin = [1.03 .731]; % Rev 2
-Lin = [.95 .650]; % Rev 2
+% Length in inches
+% Lin = [1.03 .731]; % Rev 1
+Lin = [.933 .650]; % Rev 2
 L = Lin.*2.54/100; % in->m
 
-% Diameter inches;
+% Diameter inches
 % Din = 0.07; % Rev 1
-Din = 0.06/1; % Rev 2
+Din = 0.05/1; % Rev 2
 D = Din*2.54/100;
 
-M = A*L*p./L; % mass kg/m
+% Area meters^2
+A = pi*(D/2)^2;
 
-% Mass moment of inertia of a rod
+% Mass per length, kg/m
+M = A*L*p./L; 
+
+% Mass moment of inertia of a rod (at end)
 I = (pi/64)*D^4;
 
 % Frequency in Hertz
 f = 3.52./(2*pi*L.^2) .* sqrt(E*I/(p*A));
+fprintf('Probe radial resonant frequency range:\n')
 fprintf('%fkHz\n',f/1000)
 
 % likely somewhere above 2.3kHz for Rev 1, 2kHz for Rev 2
 % photodiode or inferometer to check in lab
+
+%% Resonance of the Piezo
+% PI P-840.6 90um travel piezo
+% only want to use ~1/3 the resonant frequency in stimulation
+
+% nominal unloaded resonance * tolerance
+f0 = 6000*0.8;
+
+% unloaded mass estimate (very conservative)
+m0 = 28; % grams
+
+% measured Rev 1 probe mass
+m1 = 2.4; % grams
+
+f1 = f0*sqrt(m0/(m0+m1));
+fprintf('Piezo axial resonant frequency with load:\n%fkHz\n',f1/1000)
+
+% the radial resonant frequency will be high due to the wide stacks
