@@ -1,8 +1,0 @@
-Next version changes:
-- only specify sharp tipped version of the probe
-- can lengthen a small amount (.05) or lengthen the knurled portion
-- no need for the semi-custom 0.07 diameter. Can reduce to the standard ground stock size of 0.06 diameter (1.5mm) and take the hit on resonance
-- might want to make a version with a more forgiving diameter as well... 1.5mm is tough for high mag objectives
-
-- Proposed change: 
--- reduce diameter to 1.5mm (0.06 in, reduction by 250um) and reduce the length by 2mm (.08 in) to .95in total —> 2kHz conservative res estimate, still very reasonable
