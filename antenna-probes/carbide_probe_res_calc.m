@@ -24,13 +24,16 @@ p = 14.5*1000; % gm/cm^3 -> kg/m^3
 E = 593*1E9; % Gpa -> pa
 
 % Length in inches
-% Lin = [1.03 .731]; % Rev 1
-Lin = [.933 .650]; % Rev 2
+% Lin = [1.03 .731]; % Rev 1, Design 1
+% Lin = [.933 .650]; % Rev 2, Design 1
+% Design 2 has additonal ~1-2mm of insulating washer w/nylon threaded bridging adapter
+Lin = [.990 .692] + 0.07 ; % Rev 1, Design 2
 L = Lin.*2.54/100; % in->m
 
 % Diameter inches
 % Din = 0.07; % Rev 1
-Din = 0.05/1; % Rev 2
+% Din = 0.05/1; % Rev 2
+Din = 0.05; % Rev 1, D2
 D = Din*2.54/100;
 
 % Area meters^2
