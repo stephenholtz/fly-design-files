@@ -17,3 +17,7 @@ TODO: Add pictures
 
 ## adapters
 * 3D printable adapters for transferring flies between standard containers or holding
+
+## probes
+* probes that are stiff enough and low resonance enough to be useful for fly poking
+* probe designs are all manufactured by the wonderful folks at [Carbide Probes](https://www.carbideprobes.com/)
